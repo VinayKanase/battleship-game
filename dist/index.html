@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleShip</title>
+</head>
+<body>
+    <header><h1 class="main main-heading">BattleShip</h1></header>
+    <section id="page1">
+        <div class="startModal">
+            <div class="btns">
+                <button id="start" class="btn">Start Game</button>
+                <a href="https://en.wikipedia.org/wiki/Battleship_(game)">How to Play?</a>
+            </div>
+        </div>
+        <!-- Set your Ships or Submarines on base -->
+        <div id="setShips" class="setShips display-none">
+            <h2 class="sub-heading">Add Your Ships on Board</h2>
+            <div class="Wrapper">
+                <div class="grid gameBoard" id="setPlayerGameBoard">
+                </div>
+                <div class="shipsList">
+                    <div class="ship">
+                        <span class="block"></span>
+                        <span class="block"></span>
+                        <span class="block"></span>
+                        <span class="block"></span>
+                        <span class="block"></span>
+                    </div>
+                    <div class="ship">
+                        <span class="block"></span>
+                        <span class="block"></span>
+                        <span class="block"></span>
+                        <span class="block"></span>
+                    </div>
+                    <div class="ship">
+                        <span class="block"></span>
+                        <span class="block"></span>
+                        <span class="block"></span>
+                    </div>
+                    <div class="ship">
+                        <span class="block"></span>
+                        <span class="block"></span>
+                    </div>
+                    <div class="ship">
+                        <span class="block"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestions">
+                <div class="gif">
+                    <img src="./assets/idea.gif" alt="">
+                </div>
+                <ul class="messages">
+                    <li>Click on Board to add Your Ship</li>
+                    <li>Rotate Ship using Rotate Button</li>
+                </ul>
+            </div>
+            <div class="options">
+                <button class="btn">Random</button>
+                <button class="btn">Clear</button>
+                <button class="btn">Rotate</button>
+                <button class="btn">Start</button>
+            </div>
+        </div>
+    </section>
+    <section id="mainPage" class="display-none">
+        <!-- Message -->
+        <div class="messageWrapper">
+         <div class="messageOutput">Player's Turn</div>
+        </div>
+        <!-- GameBoards -->
+        <div class="gameBoardWrapper">
+            <div class="gameBoard1">
+                <div id="playerBoard" class="gameBoard grid"></div>
+                <div class="sunkShips">Sunken Ships: <span id="totalSunkenShips1">0</span></div>
+            </div>
+            <div class="gameBoard2">
+                <div id="opponentBoard" class="gameBoard grid"></div>
+                <div class="sunkShips">Sunken Ships: <span id="totalSunkenShips2">0</span></div>
+            </div>
+        </div>
+        <!-- Remaining Battle Ships Information -->
+    </section>
+    <div class="startModal display-none">
+        <div class="finalModal">
+            <div class="finalText">Player Won!!!</div>
+            <button class="btn" id="playAgain">Play Again</button>
+        </div>
+    </div>
+    <script src="./bundle.js"></script>
+</body>
+</html>
