@@ -117,7 +117,7 @@ body {
   transition: all 0.5s;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background: white;
   color: black;
 }
@@ -171,12 +171,22 @@ body {
   border: 1px solid #000;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[10];
-      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   -ms-grid-rows: (1fr)[10];
       grid-template-rows: repeat(10, 1fr);
   gap: 2px;
   background: black;
+}
+
+.grid .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  gap: 2px;
 }
 
 .grid .gridItem {
@@ -241,8 +251,8 @@ body {
           transform: rotate(-45deg);
 }
 
-.placedShip {
-  background: grey;
+.placedShip, .shipDrop {
+  background: grey !important;
 }
 
 .shipsList .ship {
